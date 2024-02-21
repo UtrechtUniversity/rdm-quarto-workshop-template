@@ -1,0 +1,16 @@
+---
+title: "Presentation"
+format:
+  revealjs: 
+    theme: dark
+---
+
+## Getting up
+
+- Turn off alarm
+- Get out of bed
+
+## Going to sleep
+
+- Get in bed
+- Count sheep

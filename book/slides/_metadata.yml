@@ -1,0 +1,7 @@
+format:
+  revealjs: 
+    menu: false
+    progress: true
+    width: 1920
+    height: 1080
+search: false

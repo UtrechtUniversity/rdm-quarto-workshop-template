@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Book template"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Basics"
+        contents:
+          - href: index.qmd
+            text: Home
+          - href: chapter1.qmd
+            text: Chapter 1
+      - section: "Advanced"
+        contents:
+          - href: chapter2.qmd
+            text: Chapter 2
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

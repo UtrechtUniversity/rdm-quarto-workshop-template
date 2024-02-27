@@ -2,17 +2,17 @@
 format: 
   revealjs:
     theme: ../styles/uu.scss
-    logo: UU_logo_2021_EN_RGB.png
+    logo: ../img/UU_logo_2021_EN_RGB.png
     footer: "John Doe"
 ---
 
 # Chapter TWO{data-background-color="#FFCD00"}
 
-![](../img/UU_logo_2021_EN_RGB.png){.absolute bottom=320 left=-240 width="300" height="120"}
+![](../img/UU_logo_2021_EN_RGB.png){.absolute bottom=320 left=0 width="300" height="120"}
 
 # {data-background-color="#FFCD00"}
 
-![](../img/UU_logo_2021_EN_RGB.png){.absolute bottom=-100 left=-240 width="300" height="120"}
+![](../img/UU_logo_2021_EN_RGB.png){.absolute bottom=-100 left=0 width="300" height="120"}
 
 :::::::::::::: {.columns}
 

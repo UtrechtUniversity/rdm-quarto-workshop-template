@@ -28,12 +28,38 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with: 
+          tinytex: true
+      
+      # optional step when there is python code to execute
+      - name: Setup Python
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          python-version: 3.8
+          channels: conda-forge
+          miniforge-variant: Mambaforge
+          activate-environment: quarto-import
+          environment-file: _import/environment.yml
+
+      # optional steps when Rmarkdown code is used
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+      - name: Install packages
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::knitr
+            any::rmarkdown
+
       - name: Setup Pages
         uses: actions/configure-pages@v1
+
       - name: Render Website
         run: quarto render book/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

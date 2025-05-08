@@ -27,22 +27,18 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with: 
-          tinytex: true
-      
-      # optional step when there is python code to execute
-      - name: Setup Miniforge
-        uses: conda-incubator/setup-miniconda@v3
         with:
-          miniforge-version: latest
-          activate-environment: quarto-import
-          python-version: "3.8"
-          channels: conda-forge
-          environment-file: _import/environment.yml
+          tinytex: true
+
+      # optional step when there is python code to execute
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version-file: "pyproject.toml"
 
       # optional steps when Rmarkdown code is used
       - name: Set up R
